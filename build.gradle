@@ -199,6 +199,10 @@ allprojects {
 apply plugin: 'org.sonarqube'
 sonar {
   properties {
+    property "sonar.projectKey", "the-dna-squad_sonarqube"
+    property "sonar.organization", "the-dna-squad"
+    property "sonar.host.url", "https://dev19.sc-dev19.io"
+    
     property 'sonar.projectName', projectTitle
     property 'sonar.projectVersion', "${versionInSources}-SNAPSHOT"
     property 'sonar.buildString', version
