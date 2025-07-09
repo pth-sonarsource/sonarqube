@@ -37,7 +37,7 @@ jobs:
           SONAR_ARCHITECTURE_EXPORT_FLAVOR: true
           SONAR_ARCHITECTURE_EXPORT_ISSUES: true
         run: |
-          ./gradlew build sonar --info -Dsonar.filesize.limit=100m -Dorg.gradle.jvmargs="-Xmx4g" --info -x test
+          ./gradlew build sonar --info -Dsonar.filesize.limit=100 -Dorg.gradle.jvmargs="-Xmx4g" --info -x test
           echo "SHORT_SHA=$(echo $GITHUB_SHA | cut -c1-7)" >> $GITHUB_ENV
           echo "DATE=$(echo $(date +'%Y-%m-%d'))" >> $GITHUB_ENV
       - name: Store dna xml & json files
