@@ -202,6 +202,7 @@ sonar {
     property "sonar.projectKey", "sonarsource_sonarqube-server"
     property "sonar.organization", "sonarsource"
     property "sonar.host.url", "https://sc-staging.io"
+    property "sonar.scanner.apiBaseUrl", "https://api.sc-staging.io"
     
     property 'sonar.projectName', projectTitle
     property 'sonar.projectVersion', "${versionInSources}-SNAPSHOT"
