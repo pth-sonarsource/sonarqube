@@ -40,7 +40,7 @@ jobs:
           SONAR_ARCHITECTURE_EXPORT_FLAVOR: true
           SONAR_ARCHITECTURE_EXPORT_ISSUES: true
         run: |
-          ./gradlew build sonar --info -Dsonar.filesize.limit=100 -Dorg.gradle.jvmargs="-Xmx4g" -Dsonar.scanner.sonarcloudUrl=https://sc-staging.io -Dsonar.scanner.apiBaseUrl=https://api.sc-staging.io -Dsonar.architecture.visualization.enabled=false -Dsonar.architecture.enable=true -Dsonar.architecture.preview.enable=true -Dsonar.architecture.preview.available=true --info -x test
+          ./gradlew build sonar --info -Dsonar.filesize.limit=100 -Dorg.gradle.jvmargs="-Xmx4g" -Dsonar.architecture.visualization.enabled=false -Dsonar.architecture.enable=true -Dsonar.architecture.preview.enable=true -Dsonar.architecture.preview.available=true --info -x test
           echo "SHORT_SHA=$(echo $GITHUB_SHA | cut -c1-7)" >> $GITHUB_ENV
           echo "DATE=$(echo $(date +'%Y-%m-%d'))" >> $GITHUB_ENV
       - name: Store dna xml & json files
